@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Montre Numérique</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="watch-container">
+    <header class="digital-display">
+      <div id="current-time" class="time">00:00:00</div>
+    </header>
+
+    <div class="slider-container">
+      <div class="slider">
+        <section class="function" id="minuteur">
+          <h3>Minuteur</h3>
+          <input type="number" id="minuteur-input" placeholder="Temps (en secondes)">
+          <div class="buttons">
+            <button id="start-timer">Démarrer</button>
+            <button id="stop-timer">Arrêter</button>
+          </div>
+          <p id="timer-display">00:00</p>
+        </section>
+
+        <section class="function" id="chronometre">
+          <h3>Chronomètre</h3>
+          <div class="buttons">
+            <button id="start-stop-chrono">Marche/Arrêt</button>
+            <button id="reset-chrono">Reset</button>
+            <button id="lap-chrono">Tour</button>
+          </div>
+          <p id="chrono-display">00:00:00</p>
+          <ul id="lap-times"></ul>
+        </section>
+
+        <section class="function" id="reveil">
+          <h3>Réveil</h3>
+          <input type="time" id="alarm-time">
+          <input type="text" id="alarm-message" placeholder="Message">
+          <div class="buttons">
+            <button id="set-alarm">Ajouter</button>
+          </div>
+          <ul id="alarm-list"></ul>
+        </section>
+      </div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <div class="nav-arrows">
+      <button class="nav-left">←</button>
+      <button class="nav-right">→</button>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
